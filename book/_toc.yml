@@ -1,5 +1,7 @@
 format: jb-book
 root: landing-page
 chapters:
-- file: page1
-- file: page2
+- file: le-gain-offset
+- file: efficiency-imaging-nomex
+- file: effi-rsp-lut2
+- file: resolution

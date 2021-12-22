@@ -1,2 +1,2 @@
-_build/html/index.html: page1.ipynb
+_build/html/index.html: *.ipynb
 	jupyter-book build .
