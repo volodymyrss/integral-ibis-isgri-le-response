@@ -1,4 +1,4 @@
-# INTEGRAL IBIS/ISGRI modelling troubles
+# Introduction to INTEGRAL IBIS/ISGRI modelling troubles
 
 |||
 |:--:|:--:|
