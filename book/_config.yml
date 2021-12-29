@@ -1,5 +1,29 @@
 title: "IBIS/ISGRI modeling troubles"
 logo: images/logo-wide.png
+author: V.S.
 execute:
-  execute_notebooks: "off"
+    execute_notebooks: "off"
+
+repository:
+    url                       : https://github.com/volodymyrss/integral-ibis-isgri-le-response
+    path_to_book              : "book"  # A path to your book's folder, relative to the repository root.
+    branch                    : master  # Which branch of the repository should be used when creating links
+
+
+html:
+    use_repository_button: true
+    use_issues_button: true
+    use_edit_page_button: true
+    extra_navbar              : ""  # Will be displayed underneath the footer.
+    extra_footer              : Powered by <a href="https://jupyterbook.org">Jupyter Book</a> 
+    baseurl                   : https://www.isdc.unige.ch/~savchenk/integral-ibis-isgri-le-response/
+
+    comments: 
+        hypothesis              : true
+        #    utterances              : true
+    
+sphinx:
+    config:
+        theme_single_page: true
+        #html_theme: pydata_sphinx_theme
 
