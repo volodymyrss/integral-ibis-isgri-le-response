@@ -23,7 +23,8 @@ html:
         #    utterances              : true
     
 sphinx:
-    config:
-        theme_single_page: true
-        #html_theme: pydata_sphinx_theme
+    config: 
+    #html_theme: pydata_sphinx_theme
+        html_static_path: ['custom'] 
+        html_style: 'my_theme.css'
 
