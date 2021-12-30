@@ -39,27 +39,23 @@ jobs:
       - name: Build the book
         run: |
           make book
-
+          
       - name: Prose Linting (Vale)
         uses: errata-ai/vale-action@v2.13.0
         with:
+          config: https://raw.githubusercontent.com/errata-ai/vale/master/.vale.ini
           styles: |
             https://github.com/errata-ai/Microsoft/releases/latest/download/Microsoft.zip
             https://github.com/errata-ai/write-good/releases/latest/download/write-good.zip
-
-          # Optional
-          config: https://raw.githubusercontent.com/errata-ai/vale/master/.vale.ini
-
-          # Optional
+          
           files: '["*.md", "*.html"]'
         env:
-          # Required
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
 
-        - name: webfactory/ssh-agent
-          uses: webfactory/ssh-agent@v0.5.4
-          with:
-            ssh-private-key: ${{ secrets.PAGES_DEPLOY_KEY }}
+      - name: webfactory/ssh-agent
+        uses: webfactory/ssh-agent@v0.5.4
+        with:
+          ssh-private-key: ${{ secrets.PAGES_DEPLOY_KEY }}
 
 
       - name: Push to volodymyrss.github.io
