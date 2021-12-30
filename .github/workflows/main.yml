@@ -40,12 +40,14 @@ jobs:
         run: |
           make book
 
+      - name: webfactory/ssh-agent
+        uses: webfactory/ssh-agent@v0.5.4
+        with:
+          ssh-private-key: ${{ secrets.PAGES_DEPLOY_KEY }}
+
+
       - name: Push to volodymyrss.github.io
-        env:
-          PAGES_DEPLOY_KEY: ${{ secrets.PAGES_DEPLOY_KEY }}
         run: |
-          mkdir -pv ~/.ssh
-          umask 0077 && echo $PAGES_DEPLOY_KEY > ~/.ssh/id_rsa
           git clone git@github.com:volodymyrss/volodymyrss.github.io.git
           rsync -avu book/_build/html volodymyrss.github.io.git/integral-ibis-isgri-le-response
           cd volodymyrss.github.io.git
