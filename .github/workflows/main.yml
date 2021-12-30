@@ -66,6 +66,9 @@ jobs:
           cd volodymyrss.github.io
           git config --global user.name "Volodymyr Savchenko (with Pages Bot)"
           git config --global user.email vladimir.savchenko+pages-bot@gmail.com
+          git status
           git add integral-ibis-isgri-le-response
+          git status
           git commit -a -m "update integral-ibis-isgri-le-response: ${{ github.event.head_commit.message }}"
+          git status
           git push
