@@ -17,13 +17,14 @@ on:
 jobs:
   build-and-deploy:
     # The type of runner that the job will run on
-    runs-on: ubuntu-latest
+    runs-on: python3.9
     
     steps:
       - uses: actions/checkout@v2
 
       - name: Build the book
         run: |
+          pip install --upgrade jupyter-book
           make book
 
       - name: Push to GitHub Pages
