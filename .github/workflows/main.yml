@@ -51,6 +51,8 @@ jobs:
           git clone git@github.com:volodymyrss/volodymyrss.github.io.git
           rsync -avu book/_build/html volodymyrss.github.io/integral-ibis-isgri-le-response
           cd volodymyrss.github.io
+          git config --global user.name "Volodymyr Savchenko (with Pages Bot)"
+          git config --global user.email vladimir.savchenko+pages-bot@gmail.com
           git add integral-ibis-isgri-le-response
           git commit -a -m "update integral-ibis-isgri-le-response: ${{ github.event.head_commit.message }}"
           git push
