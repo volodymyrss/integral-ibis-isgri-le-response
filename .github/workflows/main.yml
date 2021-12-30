@@ -49,7 +49,7 @@ jobs:
       - name: Push to volodymyrss.github.io
         run: |
           git clone git@github.com:volodymyrss/volodymyrss.github.io.git
-          rsync -avu book/_build/html volodymyrss.github.io.git/integral-ibis-isgri-le-response
+          rsync -avu book/_build/html volodymyrss.github.io/integral-ibis-isgri-le-response
           cd volodymyrss.github.io.git
           git add integral-ibis-isgri-le-response
           git commit -a -m "${{ github.event.head_commit.message }}"
