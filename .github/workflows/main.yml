@@ -40,26 +40,11 @@ jobs:
         run: |
           make book
 
-      - name: Push to GitHub Pages
-        uses: crazy-max/ghaction-github-pages@v2.5.0
-        with:
-          repo: volodymyrss/volodymyrss.github.io
-          target_branch: main
-          build_dir: book/_build/html
-          keep_history: true
-          #fqdn: # optional
-          jekyll: false
-          dry_run: true
-          verbose: true
-          
-          
       - name: Push to volodymyrss.github.io
-        uses: cpina/github-action-push-to-another-repository@v1.3
-        with:
-          source-directory: book/_build/html
-          destination-github-username: volodymyrss
-          destination-repository-name: volodymyrss.github.io
-          user-email: contact@volodymyrsavchenko.com
-          destination-repository-username: volodymyrss
-          target-branch: main          
-          target-directory: integral-ibis-isgri-le-response
+        run: |
+          git clone git@github.com:volodymyrss/volodymyrss.github.io.git
+          rsync -avu book/_build/html volodymyrss.github.io.git/integral-ibis-isgri-le-response
+          cd volodymyrss.github.io.git
+          git add integral-ibis-isgri-le-response
+          git commit -a -m "${{ github.event.head_commit.message }}"
+          git push
