@@ -40,17 +40,17 @@ jobs:
         run: |
           make book
           
-      - name: Prose Linting (Vale)
-        uses: errata-ai/vale-action@v1.4.3
-        with:
-            #config: .vale.ini
-          styles: |
-            https://github.com/errata-ai/Microsoft/releases/latest/download/Microsoft.zip
-            https://github.com/errata-ai/write-good/releases/latest/download/write-good.zip
+      # - name: Prose Linting (Vale)
+      #   uses: errata-ai/vale-action@v1.4.3
+      #   with:
+      #       #config: .vale.ini
+      #     styles: |
+      #       https://github.com/errata-ai/Microsoft/releases/latest/download/Microsoft.zip
+      #       https://github.com/errata-ai/write-good/releases/latest/download/write-good.zip
           
-          files: book/_build/html/
-        env:
-          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+      #     files: book/_build/html/
+      #   env:
+      #     GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
 
       - name: webfactory/ssh-agent
         uses: webfactory/ssh-agent@v0.5.4
