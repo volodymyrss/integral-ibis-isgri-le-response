@@ -41,7 +41,7 @@ jobs:
           make book
           
       - name: Prose Linting (Vale)
-        uses: errata-ai/vale-action@v2.13.0
+        uses: errata-ai/vale-action@v1.4.3
         with:
           config: https://raw.githubusercontent.com/errata-ai/vale/master/.vale.ini
           styles: |
