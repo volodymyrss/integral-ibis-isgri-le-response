@@ -52,5 +52,5 @@ jobs:
           rsync -avu book/_build/html volodymyrss.github.io/integral-ibis-isgri-le-response
           cd volodymyrss.github.io
           git add integral-ibis-isgri-le-response
-          git commit -a -m "${{ github.event.head_commit.message }}"
+          git commit -a -m "update integral-ibis-isgri-le-response: ${{ github.event.head_commit.message }}"
           git push
