@@ -31,10 +31,13 @@ jobs:
         uses: actions/setup-python@v2
         with:
           python-version: ${{ matrix.python-version }}
+      
+      - name: Setup dependencies
+        run: |
+          pip install --upgrade jupyter-book
 
       - name: Build the book
         run: |
-          pip install --upgrade jupyter-book
           make book
 
       - name: Push to GitHub Pages
@@ -43,6 +46,7 @@ jobs:
           repo: volodymyrss/volodymyrss.github.io
           target_branch: main
           build_dir: book/_build/html
+          keep_history: true
           #fqdn: # optional
           jekyll: false
           dry_run: true
