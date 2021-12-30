@@ -66,6 +66,7 @@ jobs:
           cd volodymyrss.github.io
           git status
           du -sk integral-ibis-isgri-le-response/
+          rm -rfv integral-ibis-isgri-le-response/
           rsync -avu ../book/_build/html/ integral-ibis-isgri-le-response/
           du -sk integral-ibis-isgri-le-response/
           git config --global user.name "Volodymyr Savchenko (with Pages Bot)"
