@@ -38,8 +38,11 @@ jobs:
 
       - name: Build the book
         run: |
+          version="$(git describe --always --tags) $(git show -s --format=%ci)a"
+          < README.md sed 's/@VERSION@/'"$version"'/' > README.md.version
+          diff README.md.version README.md
+          mv -fv README.md.version README.md
           make book
-          du -sk book/_build/html/
           
       # - name: Prose Linting (Vale)
       #   uses: errata-ai/vale-action@v1.4.3
@@ -61,19 +64,13 @@ jobs:
 
       - name: Push to volodymyrss.github.io
         run: |
-          set -x
           git clone git@github.com:volodymyrss/volodymyrss.github.io.git
           cd volodymyrss.github.io
-          git status
-          du -sk integral-ibis-isgri-le-response/
           rm -rfv integral-ibis-isgri-le-response/
           rsync -avu ../book/_build/html/ integral-ibis-isgri-le-response/
-          du -sk integral-ibis-isgri-le-response/
           git config --global user.name "Volodymyr Savchenko (with Pages Bot)"
           git config --global user.email vladimir.savchenko+pages-bot@gmail.com
-          git status
           git add integral-ibis-isgri-le-response
-          git status
           git commit -a -m "update integral-ibis-isgri-le-response: ${{ github.event.head_commit.message }}"
           git status
           git push
