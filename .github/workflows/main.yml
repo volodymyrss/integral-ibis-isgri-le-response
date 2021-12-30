@@ -17,10 +17,20 @@ on:
 jobs:
   build-and-deploy:
     # The type of runner that the job will run on
-    runs-on: python3.9
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        python-version: [3.9]
     
     steps:
-      - uses: actions/checkout@v2
+      - name: Check-out the repo
+        uses: actions/checkout@v2
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v2
+        with:
+          python-version: ${{ matrix.python-version }}
 
       - name: Build the book
         run: |
