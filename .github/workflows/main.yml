@@ -40,7 +40,7 @@ jobs:
         run: |
           version="$(git describe --always --tags) $(git show -s --format=%ci)a"
           < README.md sed 's/@VERSION@/'"$version"'/' > README.md.version
-          diff README.md.version README.md
+          diff README.md.version README.md || true
           mv -fv README.md.version README.md
           make book
           
