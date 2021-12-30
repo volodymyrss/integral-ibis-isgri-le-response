@@ -43,7 +43,7 @@ jobs:
       - name: Prose Linting (Vale)
         uses: errata-ai/vale-action@v1.4.3
         with:
-          config: https://raw.githubusercontent.com/errata-ai/vale/master/.vale.ini
+          config: .vale.ini
           styles: |
             https://github.com/errata-ai/Microsoft/releases/latest/download/Microsoft.zip
             https://github.com/errata-ai/write-good/releases/latest/download/write-good.zip
