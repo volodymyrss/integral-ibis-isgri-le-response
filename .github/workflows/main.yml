@@ -24,7 +24,7 @@ jobs:
 
       - name: Build the book
         run: |
-          make build          
+          make book
 
       - name: Push to GitHub Pages
         uses: crazy-max/ghaction-github-pages@v2.5.0
