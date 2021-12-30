@@ -41,7 +41,8 @@ jobs:
           make book
 
       - name: Push to volodymyrss.github.io
-        PAGES_DEPLOY_KEY: ${{ secrets.PAGES_DEPLOY_KEY }}
+        env:
+          PAGES_DEPLOY_KEY: ${{ secrets.PAGES_DEPLOY_KEY }}
         run: |
           mkdir -pv ~/.ssh
           umask 0077 && echo $PAGES_DEPLOY_KEY > ~/.ssh/id_rsa
