@@ -1,8 +1,8 @@
 format: jb-book
 root: landing-page
 chapters:
+- file: effi-rsp-lut2
 - file: le-gain-offset
+- file: resolution
 - file: rapid-polarization
 - file: efficiency-imaging-nomex
-- file: effi-rsp-lut2
-- file: resolution
