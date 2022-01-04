@@ -12,7 +12,7 @@ cache={}
 def read_nomex_norm(y=200, z=200, ebins=None):
     fn = os.path.join(iconfig.settings.rep_base_prod, "ic/ibis/mod/isgr_effi_mod_0011.fits")    
 
-    e1, e2 = ebins
+    e1, e2  = ebins
     
     if (y,z) not in cache:
         nomex = []
