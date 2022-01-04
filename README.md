@@ -22,7 +22,7 @@
 
 ```{glossary}
 ISGRI
-  ISGRI
+  ISGRI {cite:p}`theisgri`
 
 OSA
   Offline Scientific Analysis
