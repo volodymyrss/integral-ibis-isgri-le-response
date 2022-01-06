@@ -6,3 +6,5 @@ chapters:
 - file: resolution
 - file: rapid-polarization
 - file: efficiency-imaging-nomex
+- file: response-model
+- file: cross-calibration-summary

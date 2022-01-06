@@ -28,6 +28,32 @@ sphinx:
         html_static_path: ['custom'] 
         html_style: 'my_theme.css'
         bibtex_reference_style: author_year
+    extra_extensions:
+    - sphinxcontrib.mermaid
+
+parse:
+    myst_enable_extensions:
+    - html_admonition
+    - amsmath
+    - colon_fence
+    - deflist
+    - dollarmath
+    - fieldlist
+    - html_admonition
+    - html_image
+    - linkify
+    - replacements
+    - smartquotes
+    - substitution
+    - tasklist
+
 
 bibtex_bibfiles:
     - references.bib
+
+
+
+parse:
+  myst_substitutions:
+    key1: value1
+    key2: value2
