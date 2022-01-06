@@ -34,7 +34,7 @@ jobs:
       
       - name: Setup dependencies
         run: |
-          pip install --upgrade jupyter-book
+          pip install --upgrade jupyter-book sphinxcontrib-mermaid
 
       - name: Build the book
         run: |
