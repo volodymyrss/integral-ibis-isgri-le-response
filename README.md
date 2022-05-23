@@ -16,6 +16,7 @@
 |see also| [OSA11 calibration workflow](https://www.overleaf.com/project/5c74e428239bf17320c95f32) |
 |see also| [Requirements for calibration observations with ISGRI](https://www.overleaf.com/project/5db9c995dab87000015dbc8f) and [this](https://www.overleaf.com/project/5c4f34c9dcce396e146cc67d) (to develop and submit in next AO) |
 |see also| [relation to use in HILIGT](https://www.overleaf.com/project/5f33e78775157700016a8290), [HILIGT](https://doi.org/10.1016/j.ascom.2021.100529) |
+|see also| [useful paper](https://arxiv.org/pdf/astro-ph/0505053.pdf) |
 
 
 ## Glossary 
