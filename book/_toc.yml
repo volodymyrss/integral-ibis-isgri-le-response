@@ -9,4 +9,5 @@ chapters:
 - file: response-model
 - file: cross-calibration-summary
 - file: background
+- file: catalogs
 - file: HE response, imaging, and so

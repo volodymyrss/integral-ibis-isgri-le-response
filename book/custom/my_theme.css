@@ -1,4 +1,5 @@
-@import url("sphinx-book-theme.css");
+/* @import url("_static/styles/pydata-sphinx-theme.css"); */
+@import url("styles/sphinx-book-theme.css");
 
 .container, .container-lg, .container-md, .container-sm, .container-xl {
     max-width: 2400px;

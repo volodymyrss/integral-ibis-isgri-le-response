@@ -24,7 +24,7 @@ html:
     
 sphinx:
     config: 
-    #html_theme: pydata_sphinx_theme
+        # html_theme: pydata_sphinx_theme
         html_static_path: ['custom'] 
         html_style: 'my_theme.css'
         bibtex_reference_style: author_year
